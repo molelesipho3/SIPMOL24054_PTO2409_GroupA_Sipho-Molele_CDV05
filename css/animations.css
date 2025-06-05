@@ -1,0 +1,540 @@
+/*
+* Portfolio Website - Animations Stylesheet
+* Author: Your Name
+* Version: 1.0
+*/
+
+/*--------------------------------------------------------------
+# Animation Keyframes
+--------------------------------------------------------------*/
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes wave {
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(14deg);
+    }
+    20% {
+        transform: rotate(-8deg);
+    }
+    30% {
+        transform: rotate(14deg);
+    }
+    40% {
+        transform: rotate(-4deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    60% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes gradientBg {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/*--------------------------------------------------------------
+# Animation Classes
+--------------------------------------------------------------*/
+.animate {
+    opacity: 0;
+}
+
+.animate.fade-in {
+    animation: fadeIn var(--transition-medium) var(--ease-default) forwards;
+}
+
+.animate.fade-in-up {
+    animation: fadeInUp var(--transition-medium) var(--ease-default) forwards;
+}
+
+.animate.fade-in-down {
+    animation: fadeInDown var(--transition-medium) var(--ease-default) forwards;
+}
+
+.animate.fade-in-left {
+    animation: fadeInLeft var(--transition-medium) var(--ease-default) forwards;
+}
+
+.animate.fade-in-right {
+    animation: fadeInRight var(--transition-medium) var(--ease-default) forwards;
+}
+
+.animate.zoom-in {
+    animation: zoomIn var(--transition-medium) var(--ease-default) forwards;
+}
+
+/* Animation Delays */
+.delay-100 {
+    animation-delay: 100ms;
+}
+
+.delay-200 {
+    animation-delay: 200ms;
+}
+
+.delay-300 {
+    animation-delay: 300ms;
+}
+
+.delay-400 {
+    animation-delay: 400ms;
+}
+
+.delay-500 {
+    animation-delay: 500ms;
+}
+
+.delay-600 {
+    animation-delay: 600ms;
+}
+
+.delay-700 {
+    animation-delay: 700ms;
+}
+
+.delay-800 {
+    animation-delay: 800ms;
+}
+
+.delay-900 {
+    animation-delay: 900ms;
+}
+
+.delay-1000 {
+    animation-delay: 1000ms;
+}
+
+/*--------------------------------------------------------------
+# Preloader Animation
+--------------------------------------------------------------*/
+.preloader.fade-out {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/*--------------------------------------------------------------
+# Cursor Animation
+--------------------------------------------------------------*/
+.cursor-dot.active,
+.cursor-outline.active {
+    opacity: 1;
+}
+
+.cursor-outline.hover {
+    transform: translate(-50%, -50%) scale(1.5);
+}
+
+/*--------------------------------------------------------------
+# Header Animation
+--------------------------------------------------------------*/
+.header.scrolled {
+    padding: 10px 0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.nav-toggle.active .hamburger span:nth-child(1) {
+    top: 9px;
+    transform: rotate(45deg);
+}
+
+.nav-toggle.active .hamburger span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.active .hamburger span:nth-child(3) {
+    top: 9px;
+    transform: rotate(-45deg);
+}
+
+/*--------------------------------------------------------------
+# Hero Section Animations
+--------------------------------------------------------------*/
+.hero-title .greeting {
+    animation: fadeInDown var(--transition-medium) var(--ease-default) forwards;
+    animation-delay: 300ms;
+}
+
+.hero-title .name {
+    animation: fadeInDown var(--transition-medium) var(--ease-default) forwards;
+    animation-delay: 500ms;
+}
+
+.hero-title .profession {
+    animation: fadeInDown var(--transition-medium) var(--ease-default) forwards;
+    animation-delay: 700ms;
+}
+
+.hero-description {
+    animation: fadeInUp var(--transition-medium) var(--ease-default) forwards;
+    animation-delay: 900ms;
+}
+
+.hero-buttons {
+    animation: fadeInUp var(--transition-medium) var(--ease-default) forwards;
+    animation-delay: 1100ms;
+}
+
+.hero-image .image-container {
+    animation: zoomIn var(--transition-medium) var(--ease-default) forwards;
+    animation-delay: 1300ms;
+}
+
+/*--------------------------------------------------------------
+# Typewriter Effect
+--------------------------------------------------------------*/
+.typewriter {
+    display: inline-block;
+    overflow: hidden;
+    border-right: 3px solid var(--accent);
+    white-space: nowrap;
+    margin: 0;
+    animation: 
+        typewriter 4s steps(40) 1s forwards,
+        blink 1s step-end infinite;
+}
+
+/*--------------------------------------------------------------
+# Floating Animation
+--------------------------------------------------------------*/
+.float {
+    animation: float 3s ease-in-out infinite;
+}
+
+/*--------------------------------------------------------------
+# Wave Animation
+--------------------------------------------------------------*/
+.wave {
+    animation: wave 2.5s ease-in-out infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+}
+
+/*--------------------------------------------------------------
+# Gradient Background Animation
+--------------------------------------------------------------*/
+.gradient-bg {
+    background: linear-gradient(270deg, var(--accent), var(--secondary-accent), var(--primary-light));
+    background-size: 600% 600%;
+    animation: gradientBg 10s ease infinite;
+}
+
+/*--------------------------------------------------------------
+# Skill Bar Animation
+--------------------------------------------------------------*/
+.skill-progress {
+    animation: skillProgress 1.5s ease-out forwards;
+}
+
+@keyframes skillProgress {
+    from {
+        width: 0;
+    }
+    to {
+        width: var(--progress);
+    }
+}
+
+/*--------------------------------------------------------------
+# Scroll Reveal Animations
+--------------------------------------------------------------*/
+.reveal {
+    position: relative;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all var(--transition-medium) var(--ease-default);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-left {
+    position: relative;
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: all var(--transition-medium) var(--ease-default);
+}
+
+.reveal-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-right {
+    position: relative;
+    opacity: 0;
+    transform: translateX(30px);
+    transition: all var(--transition-medium) var(--ease-default);
+}
+
+.reveal-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-zoom {
+    position: relative;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all var(--transition-medium) var(--ease-default);
+}
+
+.reveal-zoom.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/*--------------------------------------------------------------
+# Button Hover Animations
+--------------------------------------------------------------*/
+.btn-primary:hover {
+    animation: pulse 0.3s ease-in-out;
+}
+
+.btn-secondary:hover {
+    animation: pulse 0.3s ease-in-out;
+}
+
+/*--------------------------------------------------------------
+# Project Card Hover Animations
+--------------------------------------------------------------*/
+.project-card:hover .project-image::before {
+    opacity: 1;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-link {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all var(--transition-medium) var(--ease-default);
+}
+
+.project-card:hover .project-link {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.project-link:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+/*--------------------------------------------------------------
+# Timeline Animations
+--------------------------------------------------------------*/
+.timeline-dot {
+    transform: scale(0);
+    animation: zoomIn var(--transition-medium) var(--ease-default) forwards;
+}
+
+.timeline-date {
+    opacity: 0;
+    animation: fadeInRight var(--transition-medium) var(--ease-default) forwards;
+}
+
+.timeline-content {
+    opacity: 0;
+    animation: fadeInLeft var(--transition-medium) var(--ease-default) forwards;
+}
+
+.timeline-item:nth-child(even) .timeline-date {
+    animation: fadeInLeft var(--transition-medium) var(--ease-default) forwards;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    animation: fadeInRight var(--transition-medium) var(--ease-default) forwards;
+}
+
+/*--------------------------------------------------------------
+# Form Input Animations
+--------------------------------------------------------------*/
+.form-group input,
+.form-group textarea {
+    transition: border-color var(--transition-medium) var(--ease-default),
+                box-shadow var(--transition-medium) var(--ease-default);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(100, 255, 218, 0.3);
+}
+
+/*--------------------------------------------------------------
+# Social Icon Animations
+--------------------------------------------------------------*/
+.social-icon {
+    transition: all var(--transition-medium) var(--ease-default);
+}
+
+.social-icon:hover {
+    transform: translateY(-5px);
+    color: var(--primary-dark);
+    background-color: var(--accent);
+}
+
+/*--------------------------------------------------------------
+# Back to Top Button Animation
+--------------------------------------------------------------*/
+.back-to-top {
+    transition: all var(--transition-medium) var(--ease-default);
+}
+
+.back-to-top:hover {
+    transform: translateY(-5px);
+}
+
+/*--------------------------------------------------------------
+# Modal Animation
+--------------------------------------------------------------*/
+.modal-content {
+    transform: scale(0.9);
+    transition: transform var(--transition-medium) var(--ease-bounce);
+}
+
+.project-modal.active .modal-content {
+    transform: scale(1);
+}
+

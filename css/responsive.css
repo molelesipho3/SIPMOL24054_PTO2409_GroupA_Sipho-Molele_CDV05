@@ -1,0 +1,347 @@
+/*
+* Portfolio Website - Responsive Stylesheet
+* Author: Your Name
+* Version: 1.0
+*/
+
+/*--------------------------------------------------------------
+# Mobile First Approach
+--------------------------------------------------------------*/
+
+/* Base styles are already defined for mobile in style.css */
+
+/*--------------------------------------------------------------
+# Small devices (landscape phones, 576px and up)
+--------------------------------------------------------------*/
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+    
+    .hero-title .name {
+        font-size: 3.5rem;
+    }
+    
+    .hero-title .profession {
+        font-size: 2.5rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+/*--------------------------------------------------------------
+# Medium devices (tablets, 768px and up)
+--------------------------------------------------------------*/
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    .hero-title .name {
+        font-size: 4rem;
+    }
+    
+    .hero-title .profession {
+        font-size: 3rem;
+    }
+    
+    .about-content {
+        flex-direction: row;
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    
+    .soft-skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/*--------------------------------------------------------------
+# Large devices (desktops, 992px and up)
+--------------------------------------------------------------*/
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .hero-content {
+        flex-direction: row;
+    }
+    
+    .hero-text {
+        flex: 1;
+    }
+    
+    .hero-image {
+        flex: 1;
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .soft-skills-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/*--------------------------------------------------------------
+# Extra large devices (large desktops, 1200px and up)
+--------------------------------------------------------------*/
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/*--------------------------------------------------------------
+# Mobile Navigation (max-width: 991px)
+--------------------------------------------------------------*/
+@media (max-width: 991px) {
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background-color: var(--secondary-dark);
+        padding: 80px 20px 30px;
+        transition: all var(--transition-medium) var(--ease-default);
+        z-index: 99;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .nav-item {
+        margin: 10px 0;
+        width: 100%;
+    }
+    
+    .nav-link {
+        display: block;
+        padding: 10px 0;
+        width: 100%;
+    }
+    
+    .nav-toggle {
+        display: block;
+        z-index: 100;
+    }
+    
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-text {
+        margin-bottom: var(--space-xl);
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .about-image {
+        margin: 0 auto var(--space-xl);
+    }
+    
+    .projects-filter {
+        flex-wrap: wrap;
+    }
+    
+    .timeline-date {
+        position: relative;
+        width: 100%;
+        text-align: left;
+        padding: 0;
+        margin-bottom: var(--space-sm);
+    }
+    
+    .timeline-content {
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    .timeline-item:nth-child(even) .timeline-date {
+        text-align: left;
+        padding-left: 0;
+    }
+    
+    .timeline-item:nth-child(even) .timeline-content {
+        margin-right: 0;
+    }
+    
+    .experience-timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-dot {
+        left: 20px;
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-nav {
+        justify-content: center;
+        margin: var(--space-md) 0;
+    }
+    
+    .footer-social {
+        margin-top: var(--space-md);
+    }
+}
+
+/*--------------------------------------------------------------
+# Small devices (max-width: 767px)
+--------------------------------------------------------------*/
+@media (max-width: 767px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    h3 {
+        font-size: 1.75rem;
+    }
+    
+    .hero-title .name {
+        font-size: 2.5rem;
+    }
+    
+    .hero-title .profession {
+        font-size: 2rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    
+    .soft-skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .personal-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*--------------------------------------------------------------
+# Extra small devices (max-width: 575px)
+--------------------------------------------------------------*/
+@media (max-width: 575px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-title .greeting {
+        font-size: 1.2rem;
+    }
+    
+    .hero-title .name {
+        font-size: 2rem;
+    }
+    
+    .hero-title .profession {
+        font-size: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+    }
+    
+    .filter-btn {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+    
+    .info-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-xs);
+    }
+    
+    .info-icon {
+        margin-bottom: var(--space-xs);
+    }
+    
+    .social-links h3 {
+        text-align: center;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+}
+
